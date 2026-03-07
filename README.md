@@ -1,4 +1,3 @@
-```markdown
 # Support Triage Queue
 
 A Spring Boot service that ingests Support tickets and exposes a prioritized queue with computed SLA due times based on business hours.
@@ -52,4 +51,3 @@ A Spring Boot service that ingests Support tickets and exposes a prioritized que
 - **AI output rejected/corrected:** The AI initially suggested adding hours directly using `plusHours()` inside a loop. I rejected this because it fails to accurately account for tickets created at uneven times (e.g., 16:30). I corrected it to use a minute-based subtraction approach to ensure precision.
 
 - **How I verified correctness:** I wrote explicit JUnit tests verifying the three SLA calculation examples provided in the requirements. I verified timezone transitions manually by running the tests and executing API requests via Swagger.
-```
